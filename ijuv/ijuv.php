@@ -28,7 +28,7 @@ complétées de quelques ajouts (voir <a href="ijuv-resources.js">ce fichier</a>
 </p>
 <p>
 L'outil <b>ijuv</b> est un <a href="ijuv.js">code Javascript</a>
-(mis à disposition sous licence libre GPL v. 3.0) qui réalise les actions suivantes :
+(mis à disposition <a href="https://github.com/PhilippeGambette/text-processing">sous licence libre GPL v. 3.0</a>) qui réalise les actions suivantes :
 <ul>
 <li>tout mot correspondant à un mot présent dans une des listes évoquées ci-dessus, mais dont les "j" ont été remplacés par des "i"
 et les "v" ont été remplacés par des "u" (par exemple "<i>aduantage</i>"), est remplacé par sa version corrigée ("<i>advantage</i>"),

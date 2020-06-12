@@ -28,7 +28,7 @@ ou constituent la première partie d'un mot découpé par une césure.
 </p>
 <p>
 L'outil <b>coupeCésure</b> est un <a href="coupeCesure.js">code Javascript</a>
-mis à disposition sous licence libre GPL v. 3.0.
+mis à disposition <a href="https://github.com/PhilippeGambette/text-processing">sous licence libre GPL v. 3.0</a>.
 </p>
 
 <p>
@@ -46,7 +46,15 @@ car trouvé en entier dans le dictionnaire</span></li>
 
 <div id="theText">
 <?php
-echo $_POST["fullText"];
+if($_POST["type"] == "html"){
+   if($_POST["pwd"] != "fabulanumerica"){
+      echo "<b>Mot de passe incorrect : demandez-le à l'adresse philippe.gambette@u-pem.fr</b>";
+   } else {
+      echo $_POST["fullText"];
+   }
+} else {
+   echo $_POST["fullText"];
+}
 ?>
 </div>
 </body>

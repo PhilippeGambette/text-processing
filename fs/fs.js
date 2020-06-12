@@ -2,9 +2,9 @@
 Code disponible sous licence GPL v. 3.0
 Cf. https://www.gnu.org/licenses/gpl-3.0.fr.html
 
-Script de dissimilation automatique de i et j, u et v
+Script d'aide à la correction d'OCR des f en ſ
 
-    Copyright (C) 2017-2018 Philippe Gambette
+    Copyright (C) 2020 Philippe Gambette
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

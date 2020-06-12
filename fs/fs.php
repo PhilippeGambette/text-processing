@@ -3,7 +3,7 @@
 <title>fs - Correction des erreurs d'OCR ſ &rarrow; s</title>
 <style>
 h1,h2,h3 {text-align:center}
-.candidate {background-color:#FFEEEE;}
+.candidate {background-color:#FFCCCC;}
 .replaced {background-color:#CCCCFF;}
 </style>
 <link rel="icon" href="ijuv.ico" />
@@ -29,7 +29,7 @@ Voir la liste dans <a href="fs-resources.js">ce fichier</a>.
 </p>
 <p>
 L'outil <b>fs</b> est un <a href="fs.js">code Javascript</a>
-(mis à disposition sous licence libre GPL v. 3.0) qui réalise les actions suivantes :
+(mis à disposition <a href="https://github.com/PhilippeGambette/text-processing">sous licence libre GPL v. 3.0</a>) qui réalise les actions suivantes :
 <ul>
 <li>tout mot correspondant à un mot présent dans la liste ci-dessus avec une seule explication possible remplaçant des f par des s est remplacé par sa version corrigée
 puis colorée <span class="replaced">en bleu</span>,</li>
