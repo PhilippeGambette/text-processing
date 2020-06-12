@@ -1,0 +1,85 @@
+</html><head>
+<meta charset="UTF-8">
+<title>coupeCésure</title>
+<link rel="icon" href="ijuv.ico" />
+<style>
+h1,h2,h3 {text-align:center}
+.candidate {background-color:#FFEEEE;}
+.replaced {background-color:#CCCCFF;}
+</style>
+</head>
+<SCRIPT TYPE="text/javascript" SRC="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+$(document).ready( function() {
+  $("#demo").on("click",function(e){
+     e.preventDefault();
+     $("textarea#textarea").html($("#demoText").html());
+     $("#htmlType").attr("checked",false);
+     $("#textType").attr("checked",true);
+  })
+})
+</SCRIPT>
+<!--
+<SCRIPT TYPE="text/javascript" SRC="./ijuv-resources.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" SRC="./ijuv.js"></SCRIPT>
+-->
+
+</body>
+<div style="width:350px;margin:auto;font-family:Calibri">
+<h1>coupeCésure</h1>
+
+<p>
+Merci de coller dans le cadre ci-dessous le texte dans lequel vous souhaitez vous débarrasser des césures :
+</p>
+<form action="coupeCesure.php" method="post">
+<textarea cols="40" rows="10" id="textarea" name="fullText"></textarea>
+<br/><br/>
+<input type="submit">
+<br/>
+<br/><br/>
+<a href="" id="demo"><b>Charger un exemple de démonstration</b></a> (la version obtenue par reconnaissance automatique de caractères
+d'un extrait des <i><a href="https://archive.org/stream/lettresdemadamed07svig/lettresdemadamed07svig_djvu.txt">Lettres de Madame de Sévigne de sa famille et de ses amis</a></i> de Théodore de Bèze,
+téléchargée sur le site archive.org le 18/10/2018).
+</form>
+
+
+<br/><br/>
+<div style="display:none;" id="demoText">
+Versailles. Enfin nous épuisâmes nos rhétoriques, Re- 
+vel et moi ; M. de Ghaulnes nous soutenait. Ceux qui 
+disent qu'il balança ne le connoissent guère : c'est un 
+homme qui ne sait pas faire les choses de mauvaise 
+grâce, ni marchander avec son maître. Voici, en vérité, 
+la réponse qu'il lui fit; je crois que ma mémoire pourra 
+bien faire cet effort : « Sire, Votre Majesté commande, 
+et j'obéis ; je pars incessamment pour me rendre auprès 
+d'Elle, et pour y recevoir ses commandements, etc. » 
+Voilà les difficultés qu'il a faites. Il partit, comme je 
+vous Tai dit, avec beaucoup de joie, et laissa toute la 
+Bretagne fort affligée. Mme de Ghaulnes partit le len- 
+demain très-accablée, comme vous savez ; elle fut en 
+six jours à Paris ; elle m'a écrit deux fois, et me mande 
+que si elle n'avait fait cette diligence, elle n'aurait point 
+vu M. de Ghaulnes ; qu'elle ne l'avait vu qu'une heure, 
+et qu'elle me manderait des nouvelles de nos afiaires. J'ai 
+fort bien fait, ma chère enfant, de ne point aller avec 
+elle ; deux raisons : elle ne sera quasi point à Ghaulnes, 
+et quand elle y serait, cette retraite ne m'est point na- 
+turelle comme celle-ci, où je suis avec mon fils, et où 
+j'ai deux assez grandes terres, qui me peuvent donner 
+assez d'affaires pour demeurer quelque temps dans cette 
+province. Quand vous y ferez quelque réflexion, je crois 
+que vous trouverez que j'ai raison, et que si je fusse re- 
+tournée , je rendois mon voyage inutile par être trop 
+court. Pour mon fils et sa femme, ils sont ravis de pas- 
+ser ici jusqu'au carême avec moi : en ce temps-là j'irai 
+à Rennes par complaisance pour eux, parce que ce 
+temps est plus triste que l'hiver à la campagne : peut- 
+être que ce projet changera, il ne faut point voir de si 
+loin. Ge qui est sûr, ma fille, c'est que l'air d'ici est fort 
+bon; vous lui faites tort de le croire mauvais. Il fait 
+depuis plus de deux mois le plus beau temps du monde, 
+des chaleurs dans la canicule, un mois de septembre 
+</div>
+</body>
+</html>

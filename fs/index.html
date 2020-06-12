@@ -1,0 +1,76 @@
+</html><head>
+<meta charset="UTF-8">
+<title>fs - Correction des erreurs d'OCR ſ &rarrow; s</title>
+<link rel="icon" href="fs.ico" />
+<style>
+h1,h2,h3 {text-align:center}
+.candidate {background-color:#FFEEEE;}
+.replaced {background-color:#CCCCFF;}
+</style>
+</head>
+<SCRIPT TYPE="text/javascript" SRC="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+$(document).ready( function() {
+  $("#demo").on("click",function(e){
+     e.preventDefault();
+     $("textarea#textarea").html($("#demoText").html());
+     $("#htmlType").attr("checked",false);
+     $("#textType").attr("checked",true);
+  })
+})
+</SCRIPT>
+<!--
+<SCRIPT TYPE="text/javascript" SRC="./fs-resources.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" SRC="./fs.js"></SCRIPT>
+-->
+
+</body>
+<div style="width:350px;margin:auto;font-family:Calibri">
+<h1>fs</h1>
+<h2>Aide à la correction d'OCR des "f" en "ſ"</h2>
+<p>
+Cet outil a été conçu par Philippe Gambette à partir de l'outil <a href="../../ijuv/">ijuv</a> et d'une demande d'Andrew Brown sur la liste dh.
+</p>
+
+<p>
+Merci de coller dans le cadre ci-dessous le texte dans lequel vous souhaitez corriger les "f" en "ſ" :
+</p>
+<form action="fs.php" method="post">
+<textarea cols="40" rows="10" id="textarea" name="fullText"></textarea>
+<br/><br/>
+<input type="radio" checked name="type" value="txt" id="textType"/>Le texte ci-dessus est du texte brut.
+<br/><br/>
+<input type="radio" name="type" value="html" id="htmlType"/>Le texte ci-dessus est du code HTML où chaque bloc de texte à analyser est compris entre les balises <tt>&lt;span class="line"&gt;</tt> et <tt>&lt;span&gt;</tt>.
+Pour des raisons de sécurité, si vous souhaitez utiliser cette option, merci d'indiquer ici le mot de passe obtenu
+en envoyant un courriel à <i>philippe.gambette@u-pem.fr</i> :
+<input type="text" name="pwd"/>
+<br/><br/>
+<input type="submit">
+<br/>
+<br/><br/>
+<a href="" id="demo"><b>Charger un exemple de démonstration</b></a> transmis par Andrew Brown sur la liste DH le 3 juin 2020.
+</form>
+
+
+<br/><br/>
+<div style="display:none;" id="demoText">§ 1o. Ce principe bannit de la Philoſophie tous ci ::::
+les raiſonnemens à la Scholaſtique ; car les ::
+Scholaſtiques admetroient bien qu'il ne fe fait :
+rien fans cauſe, mais ils alléguoient pour cau- :-
+es des natures plaſtiques, des ames végétati- ::::
+ves , & d’autres mots vuides de fens; mais :::::
+quand on a une fois établi qu’une caufe n'eſt :ºlaº
+bonne qu’autant qu’elle fatisfait au principe de tique.
+la raifon fuffifante, c’eſt-à-dire, qu’autant qu’el-
+le contient quelque chofe par où on puiſſe faire
+voir comment, & pourquoi un effet peut arri-
+ver, alors on ne peut plus fe payer de ces grands
+mots qu'on mettoit à la place des Idées.
+Quand on : par exemple, pourquoi
+les Plantes naiffent, croiffent & fe confervent ,
+& que l’on donne pour caufe de ces effets, une
+ame végétative qui fe trouve dans toutes les
+Plantes
+</div>
+</body>
+</html>

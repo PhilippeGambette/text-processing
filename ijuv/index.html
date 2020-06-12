@@ -1,0 +1,2010 @@
+</html><head>
+<meta charset="UTF-8">
+<title>ijuv - Aide à la transcription par "j" et "v" des graphies "i" et "u" ayant valeur de consonne</title>
+<link rel="icon" href="ijuv.ico" />
+<style>
+h1,h2,h3 {text-align:center}
+.candidate {background-color:#FFEEEE;}
+.replaced {background-color:#CCCCFF;}
+</style>
+</head>
+<SCRIPT TYPE="text/javascript" SRC="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+$(document).ready( function() {
+  $("#demo").on("click",function(e){
+     e.preventDefault();
+     $("textarea#textarea").html($("#demoText").html());
+     $("#htmlType").attr("checked",false);
+     $("#textType").attr("checked",true);
+  })
+})
+</SCRIPT>
+<!--
+<SCRIPT TYPE="text/javascript" SRC="./ijuv-resources.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" SRC="./ijuv.js"></SCRIPT>
+-->
+
+</body>
+<div style="width:350px;margin:auto;font-family:Calibri">
+<h1>ijuv</h1>
+<h2>Aide à la transcription en "j" et "v" des graphies "i" et "u" ayant valeur de consonne</h2>
+<p>
+Cet outil a été conçu et calibré, dans le cadre d'une collaboration entre Delphine Amstutz et Philippe Gambette, 
+sur le recueil <i>Les Fables d’Esope Phrygien</i> de Jean Baudoin, désormais
+<a href="http://obvil.sorbonne-universite.site/corpus/fabula-numerica/baudoin_fables-esope_1660">disponible 
+sur le site de l'Obvil, dans le corpus du projet <i>Fabula numerica</i></a>.
+</p>
+
+<p>
+Merci de coller dans le cadre ci-dessous le texte dans lequel vous souhaitez dissimiler les "j" et les "i" ansi que le "v" et les "u" :
+</p>
+<form action="ijuv.php" method="post">
+<textarea cols="40" rows="10" id="textarea" name="fullText"></textarea>
+<br/><br/>
+<input type="radio" checked name="type" value="txt" id="textType"/>Le texte ci-dessus est du texte brut.
+<br/><br/>
+<input type="radio" name="type" value="html" id="htmlType"/>Le texte ci-dessus est du code HTML où chaque bloc de texte à analyser est compris entre les balises <tt>&lt;span class="line"&gt;</tt> et <tt>&lt;span&gt;</tt>.
+Pour des raisons de sécurité, si vous souhaitez utiliser cette option, merci d'indiquer ici le mot de passe obtenu
+en envoyant un courriel à <i>philippe.gambette@u-pem.fr</i> :
+<input type="text" name="pwd"/>
+<br/><br/>
+<input type="submit">
+<br/>
+<br/><br/>
+<a href="" id="demo"><b>Charger un exemple de démonstration</b></a> (la version obtenue par reconnaissance automatique de caractères
+de la <i><a href="https://archive.org/details/tragediefrancai00bezegoog">Tragedie Francaise du Sacrifice d'Abraham</a></i> de Théodore de Bèze,
+téléchargée sur le site archive.org le 24/08/2017).
+</form>
+
+
+<br/><br/>
+<div style="display:none;" id="demoText">TRAGEDIE FRANÇOISE
+DU
+SACRIFICE D&rsquo;ABRAHAM
+THEODORE DE BEZE.
+
+
+PERSONNAGES. 
+
+PROLOGVE. 
+ABRAHAM. 
+SARA. 
+ISAAG. 
+
+La trouppe des bergers de la maison d Abra- 
+ham, diuisee en deux parties. 
+
+l'ange. 
+
+SATAN. 
+
+PROLOGVE. 
+
+Dieu nous gard' tous, autant gros que menus, 
+Petits et grans, bien soyez-uous uenus. 
+Long temps y a, au moins comme il me semble, 
+Qu'ici n'y eut autant de peuple ensemble. 
+Que pleust à Dieu que toutes les semaines 
+Nous peussions uoir les Eglises si pleines. 
+
+Orça messieurs, et nous dames honnestes, 
+le nous suppli d'entendre mes requestes. 
+le nous requier nous taire seulement. 
+Comment? dira quelcune uoirement, 
+le ne sauroy' ni ne uoudroy' auec. 
+Or si faut-il pourtant clorre le bec. 
+Ou nous et moy auons peine perdue, 
+Moy de parler, et nous d'estre uenue. 
+
+
+
+14 TRAGEDIE 
+
+le uous requier tant seulement silence, 
+le uous suppli' d*ouir en patience. 
+Petits et grans ie uous diray merueilles : 
+X^^ Tant seulement prestez-moy uos oreilles. 
+
+Or donques peuple, escoute un bien grand cas : 
+
+Tu penses estre au lieu où tu n'es pas. 
+
+Plus n'est ici Lausanne, elle est bien loin : 
+
+Mais toutesfois quand il sera besoin. 
+
+Chacun pourra, uoire dedans une heure. 
+
+Sans nul danger retrouuer sa demeure. 
+
+Maintenant donc ici est le pays 
+
+Des Philisthins. Estes-uous esbahis? 
+
+le di bien phis, uoyez-uous bien ce lieu? 
+
+C'est la maison d'un seruiteur de Dieu, 
+
+Dit Abraham, celui mesme duquel 
+
+Par uiue foy, le nom est immortel.' 
+
+En cest endroit uous le uerrez tenté. 
+
+Et iusqu'au uif atteint et tormenté. 
+
+Vous le uerrez par foy iustifié. 
+
+Son fils Isaac quasi sacrifié. 
+
+Bref, uous uerrez estranges passions : 
+
+La chair, le monde et ses affections 
+
+Non seulement au uif représentées. 
+
+Mais qui plus est, par la foy surmontées. 
+
+Et qu'ainsi soit, maint loyal personnage 
+
+En donnera bien tost bon tesmoignage. 
+
+Bien tost uerrez Abraham et Sara, 
+
+Et tost après Isaac sortira : 
+
+Ne sont-ils pas tesmoins tresuerilables? 
+
+Qui ueut donc uoir choses tant admirables^ 
+
+
+
+FRANÇOISE. iri 
+
+Nous le prions seulement d'escouter, 
+Et ce qu'il a d'oreilles nous prester, 
+Estant tout seur qu'il entendra merueilles, 
+Et puis après lui rendrons ses oreilles. 
+
+ABRAHAM parle sortant de sa maison. 
+
+Depuis que i'ay mon pays délaissé. 
+
+Et de courir çà et là n'ay cessé, 
+
+Helàs mon Dieu, est il encor' un homme. 
+
+Qui ait porté de trauaux telle somme? 
+
+Depuis le temps que tu m'as retiré 
+
+Hors du pays où tu n'es adoré, 
+
+Helas mon Dieu, est-il encor' un homme. 
+
+Qui ait receu de biens si grande somme? 
+
+Voila comment par les calamitez, 
+
+Tu fais cognoistre aux hommes tes bontez. 
+
+Et tout ainsi que tu fis tout de rien, 
+
+Ainsi fais tu sortir du mal le bien, 
+
+Ne pouuant l'homme à l'heure d'un grand heur 
+
+Assez à clair cognoistre la grandeur. 
+
+Las i'ay uescu septante et cinq années, 
+
+Suiuant le cours de tes prédestinées. 
+
+Qui ont uoulu que prinse ma naissance 
+
+D'une maison riche par suffisance. 
+
+Mais quel bien peut l'homme de bien auoir. 
+
+S'il est contraint, contraint, di-je, de uoir 
+
+En lieu de toy, qui terre et cieux as faits. 
+
+Craindre et seruir mille dieux contrefaits? 
+
+Or donc sortir tu me fis de ces lieux, 
+
+Laisser mes biens, mes parents et leurs dieux, 
+
+
+
+16 TRAGEDIE 
+
+Incontinent que i'eu ouy ta uoix. 
+Mesmes tu sais que point ie ne sauois 
+En quel endroit tu me uoulois conduire : 
+Mais qui te suit, mon Dieu, il peut bien dire 
+Qu'il ua tout droit : et tenant ceste uoye, 
+Craindre ne doit que iamais il fouruoye. 
+
+SARA sortant d'vne mesme maison. 
+
+Apres auoir pensé et repensé 
+Combien i'ay eu de biens le temps passé. 
+De toi, mon Dieu, qui tousiours as uoulu 
+Garder mon cœur et mon corps impollu : 
+Puis m'as donné, en suiuant ta promesse, 
+Cest heureux nom de mère en ma uieillesse : 
+En mon esprit suis tellement rauie, 
+Que ie ne puis, comme i'ay bonne enuie, 
+A toy mon Dieu faire recognoissance 
+Du moindre bien dont i'aye iouyssance : 
+Si ueux-ie au moins, puis qu'à l'escart ie suis, 
+Te mercier. Seigneur comme ie puis. 
+Mais n'est-ce pas mon Seigneur que ie uoy? 
+Si le pensoy'-ie estre plus loin de moy. 
+
+ABRAHAM. 
+
+Sara, Sara, ce bon uouloir ie loue, 
+Et n'as rien dit que tresbien ie n'aduoue. 
+Approche-toy, et tous deux en ce lieu 
+Recogiioissons les grans bien-faicts de Dieu, 
+Commune en esta deux la iouissance, 
+Commune en soit à deux la cognoissance. 
+
+
+
+FRANÇOISE. 17 
+
+SARA. 
+
+Hà mon seigneur, que sauroy'-ie mieux faire. 
+Que d'essayer tousiours à nous complaire 
+Pour cela suis-ie en ce monde ordonnée. 
+Et puis, comment saurait-on sa iournee 
+Mieux employer qu'à chanter Texcellence 
+De ce grand Dieu, dont la magnificence 
+Et haut et bas se présente à nos yeux? 
+
+ABRAHAM. 
+
+L'homme pour uray ne sauroit faire mieux, 
+Que de chanter du Seigneur Texcellence : 
+Car il ne peut, pour toute recompense 
+Des biens qu'il a par lui iournellement. 
+Rien luy payer qu'honneur tant seulement. 
+
+CANTIQVE D'ABRAHAM ET DE SARA. 
+
+Or sus donc commençons, 
+Et le los annonçons 
+Du grand Dieu souuerain. 
+Tout ce qu'eusmes iamais. 
+Et aurons désormais. 
+Ne uient que de sa main. 
+
+C'est lui qui des hauts cieux 
+Le grand tour spacieux 
+Entretient de la haut : 
+Dont le cours asseuré, 
+Est si bien mesuré. 
+Que iamais il ne faut. 
+
+
+
+18 TRAGEDIE 
+
+Il fait l'esté bruslant : 
+Il fait rhyver tremblant : 
+Terre et mer il conduit : 
+La pluye et le beau temps, 
+L'automne et le printemps, 
+Et le iour et la nuict. 
+
+Las, Seigneur qu'estions-nous, 
+Que nous as entre tous 
+Choisis et retenus? 
+Et contre les meschans 
+Par uilles et par champs. 
+Si long temps maintenus? 
+
+Tiré nous as des lieux 
+Tous remplis de faux dieux, 
+Vsant de tes bontez : 
+Et de mille dangers. 
+Parmi les estrangers, 
+Tousiours nous as iettez. 
+
+En nostre grand besoin 
+Egypte a eu le soin 
+De nous entretenir : 
+Puis contraint a esté 
+Pharaon despité, 
+De nous laisser uenir. 
+
+Quatre rois furieux 
+Desia uictorieux 
+Auons mis à l'enuers : 
+
+
+
+FRANÇOISE. 19 
+
+Du sang de ces meschans^ 
+Nous auons ueu les champs 
+Tous rouges et couuers. 
+
+De Dieu ce bien nous uient : 
+Car de nous iuy souuient, 
+Comme de ses amis. 
+Lui donc nous donnera 
+Lorsque temps en sera» 
+Tout ce qu'il a promis. 
+
+A nous et nos enfants, 
+En honneur triomphans 
+Geste terre appartient : 
+Dieu nous l'a dit ainsi. 
+Et le croyons aussi : 
+Car sa promesse il tient. 
+
+Tremblez donques peruers. 
+Qui par tout Tuniuers 
+Estes si dru semez : 
+Et qui nous estes faits 
+Mille dieux contrefaits, 
+Q'en uain nous reclamez. 
+
+Et toy Seigneur uray Dieu, 
+Sors un iour de ton lieu. 
+Que nous soyons uengez 
+De tous tes ennemis : 
+Et qu'à néant soyent mis. 
+Les dieux qu'ils ont forgez. 
+
+
+
+20 TRAGEDIE 
+
+ABRAHAM. 
+
+Or SUS Sara, le grand Dieu nous bénie, 
+A celle fin que durant ceste uie 
+Pour tant de biens que lui seul nous ottroye, 
+A le seruir chacun de nous s'employe. 
+Retirons-nous, et sur tout prenons garde 
+A nostre fils que trop ne se bazarde, 
+Par fréquenter tant de mal-heureux hommes. 
+Parmi lesquels nous uoyez que nous sommes. 
+Vn uaisseau neuf tient Todeur longuement. 
+Dont abbreuué il est premièrement. 
+Quoy qu'un enfant soit de bonne nature. 
+Il est perdu sans bonne nourriture. 
+
+SARA. 
+
+Monsieur i'espere en faire mon deuoir. 
+Et pour autant qu'en lui nous deuons uoir 
+De nostre Dieu le uouloir accompli, 
+Seure ie suis qu'il prendra si bon pli, 
+Et le Seigneur si bien le bénira. 
+Qu'à son honneur le tout se conduira. 
+
+SATAN en habit de moine. 
+
+le uay, ie uien, îour et nuict ie trauaille, 
+Et m'est aduis en quelque part que l'aille, 
+Que ie ne pers ma peine aucunement. 
+Règne le Dieu en son haut firmament, 
+Mais pour le moins la terre est toute à moy. 
+Et n'en déplaise à Dieu ni à sa Loy. 
+
+
+
+FRANÇOISE. 21 
+
+Dieu est aux cieux par les siens honoré : 
+
+Des miens ie suis en la terre adoré. 
+
+Dieu est au ciel : et bien, ie suis en terre. 
+
+Dieu fait la paix, et moy ie fay la guerre. 
+
+Dieu règne en haut : et bien, ie règne en bas, 
+
+Dieu fait la paix, et ie fay les débats. 
+
+Dieu a créé et la terre et les cieux : 
+
+l'ay bien plus faict : car i ay créé les dieux. 
+
+Dieu est serui de ses Anges luisans. 
+
+Ne sont aussi mes anges reluisans? 
+
+Il n'y a pas iusques à mes pourceaux, 
+
+A qui ie n'aye enchâssé les museaux. 
+
+Tous ces paillards, ces gourmans, cesyurongnes, 
+
+Qu'on uoit reluire auec leurs rouges trongnes. 
+
+Portants saphirs et rubis des plus fins. 
+
+Sont mes supposts, sont mes urais chérubins. 
+
+Dieu ne fit onc chose tant soit parfaicte, 
+
+Qui soit égale à celui qui l'a faite : 
+
+Mais moy i'ay fait, dont uanter ie me puis, 
+
+Beaucoup de gens pires que ie ne suis. 
+
+Car quant à moy ie croy, et say tresbien 
+
+Qu'il est un Dieu, et que ie ne uaux rien : 
+
+Mais i en say bien à qui totalement, 
+
+l'ay renuersé le faux entendement. 
+
+Si que les uns (qui est un cas commun) 
+
+Aiment trop mieux seruir mille dieux qu'un : 
+
+Les autres ont fantasie certaine. 
+
+Que de ce Dieu l'opinion est uaine. 
+
+Voila comment depuis l'homme premier, 
+
+Heureusement i'ay suiui ce mestier. 
+
+
+
+22 TRAGEDIE 
+
+Et poursuiuray, quoy qu'en doiue aduenir, 
+Tant que pourray cest habit maintenir. 
+Habit encor' en ce monde incognu, 
+Mais qui sera un iour si bien cognu, 
+Qu'il n'y aura ne uille ne uillage, 
+Qui ne le uoye à son tresgrand dommage. 
+froc, ô froc tant de maux tu feras, 
+Et tant d'abus en plein iour couuriras. 
+Ce froc, ce froc un iour cognu sera. 
+Et tant de maux au monde apportera, 
+Que si n'estoit l'enuie dont i abonde, 
+Tauroy* pitié moy-mesme de ce monde. 
+Car moy qui suis de tous meschans le pire, 
+En le portant moi-mesme ie m empire : 
+Or se feront ces choses en leurs temps, 
+Mais maintenant assaillir ie pretens 
+Vn Abraham, lequel seul sur la terre 
+Auec les siens, m'ose faire la guerre. 
+De faict, ie Tay maintefois assailli. 
+Mais i'ay tousiours à mon uouloir failli : 
+Et ne uis onc uieillard mieux résistant. 
+Mais il aura des assauts tant et tant. 
+Qu'en brief sera, au moins comme i'espere, 
+Du rang de ceux desquels ie suis le père. 
+Vray est qu'il a au uray Dieu sa fiance, 
+Vray est qu'il a du uray Dieu lalliance. 
+Vray est que Dieu luy a promis merueilles, 
+Et desia fait des choses nompareilles : 
+Mais quoy? s'il n'a ferme perseuerance. 
+Que luy pourra seruir son espérance? 
+
+
+
+FRANÇOISE. 23 
+
+le feray tant de tours et ça et là, 
+Que ie rompray Tasseurance qu'il a. 
+De deux enfans qu'il a, l'un ie ne crains : 
+L'autre à grand peine eschapper a mes mains. 
+La mère est femme : et quant aux seruiteurs, 
+Sont simples gens, sont bien poures pasteurs, 
+Bien peu rusez encontre mes cautelles. 
+Or ie m'en uay employer peines telles 
+A les auoir, que ie suis bien trompé 
+Si le plus fin n'est bien tost attrapé. 
+
+ABRAHAM ressortant de la maison, 
+
+Quoy que ie die, ou que ie face, 
+Rien n'y a dont ie ne me lasse. 
+Tant me soit l'afifaire agréable : 
+Telle est ma nature damnable. 
+Mais sur tout ie me mescontente. 
+De moy-mesme : et fort me tormenie, 
+Veu que Dieu iamais ne se fasche 
+De m aider : par quoy ie me tasche 
+A ne me fascher point aussi 
+De recognoistre sa merci, 
+Autant de bouche que de cœur, 
+
+l'angï;. 
+
+Abraham, Abraham. 
+
+ABRAHAM. 
+
+Seigneur, 
+Me voici. 
+
+
+
+24 tragedie 
+
+l'ange. 
+
+Ton fils bien aimé, 
+Ton fils unique Isaac nommé. 
+Par toy soit mené îusqu'au lieu 
+Surnommé la Myrrhe de Dieu. 
+Là deuant moy tu l'ofiTriras, 
+Et tout entier le brusleras, 
+Au mont que ie te montreray. 
+
+ABRAHAM. 
+
+Brusler! brusler! ieleferay. 
+Mais mon Dieu, si ceste nouuelle, 
+Me semble fascheuse et nouuelle, 
+Seigneur, me pardonneras-tu? 
+Hélas, donne-moy la uertu 
+D'accomplir ce commandement. 
+Hà bien cognoy ie ouuertement, 
+Qu'enuers moy tu es courroucé. 
+Làs, Seigneur, ie t'ay ofiensé. 
+Dieu qui as faict ciel et terre, 
+A qui ueux-tu faire la guerre? 
+Me ueux-tu donc mettre si bas? 
+Helas, mon fils, hélas , helas ! 
+Par quel bout doy-îe commencer? 
+La chose uaut bien le penser. 
+
+Troupe de bergers sortans de la maison d'Abraham. 
+
+
+
+FRANÇOISE. 25 
+
+DEMIE TROUPE. 
+
+Amis, il est temps, ce me semble, 
+Que nous retournions tous ensemble 
+Vers nos compagnons. 
+
+DEMIE TROUPE. 
+
+le le ueux. 
+Car si nous sommes auec eux, 
+Ils en seront plus asseurez. 
+
+ISAAC. 
+
+Hola, ie nous pri demeurez. 
+Gomment? me lalssez-uous ainsi? 
+
+TROUPE, 
+
+Isaac, demeurez ici : 
+Autrement monsieur uostre père, 
+Ou bien madame uostre mère 
+En pourroyent estre mal contens. 
+Il uiendra quelque iour le temps 
+Que uous serez grand, si Dieu plaist. 
+Et lors uous cognoistrez que c'est 
+De garder aux champs les troupeaux, 
+En danger par monts et par uaux. 
+De tant de bestes dangereuses, 
+Sortans des forests ombrageuses. 
+
+
+
+26 TRAGEDIE 
+
+ISAAC. 
+
+
+
+Pensez-uous aussi que uoulusse 
+Départir deuant que ie seusse 
+Si mon père ainsi le uoudroit? 
+
+
+
+TROUPE. 
+
+Aussi faut-il en tout endroict, 
+Qu'un fils honneste et bien appris, 
+Quelque cas qu'il ait entrepris, 
+A père et à mère obéisse. 
+
+ISAAC. 
+
+le n'y faudray point que ie puisse. 
+Et fust-ce iusques au mourir. 
+Mais tandis que ie uay courir 
+lusqu'à mon père, pour cognoistre 
+Quelle sa uolonté peut estre, 
+Voulez-uous pas m'attendre ici? 
+
+TROUPE. 
+
+Allez, nous le ferons ainsi. 
+
+CANTIQUE DE LA TROUPE. 
+
+Thomme heureux au monde 
+Qui dessus Dieu se fonde. 
+Et en fait son rampart : 
+Laissant tous ces hautains. 
+Et tant sages mondains 
+S'esgarer à Tescart. 
+
+
+
+FRANÇOISE. 27 
+
+Poureté ni richesse 
+N'empesche ni ne blesse 
+D'un fidèle le cœur. 
+Quoy qu'il soit tormenté, 
+Et mille fois tenté, 
+Le fidèle est ueînqueur. 
+
+Ce grand Dieu qui le meine, 
+Au plus fort de sa peine, 
+En prend un si grand soin, 
+Qu'il le uient redresser 
+Estant prest de glisser. 
+En son plus grand besoin. 
+
+Cela peut-on cognoistre 
+D Abraham nostre maistre : 
+Car tant plus on l'assaut 
+Et deçà et delà. 
+Tant moins de peur il a, 
+Et moins le cœur lui faut. 
+
+Il a laissé sa terre, 
+Faim lui a fait la guerre, 
+En Egypte est uenu. 
+Sara il uoit soudain 
+Rauie de la main 
+D un grand Roy incognu. 
+
+A Dieu fait sa demande. 
+Soudain le Roy le mande. 
+Et sa femme lui rend : 
+
+
+
+28 TRAGEDIE 
+
+Le prie de uuider, 
+Abraham sans tarder. 
+Autre uoye entreprend. 
+
+Mais durant ceste fuîtte, 
+Son bien si bien profite, 
+Que pour s'entretenir, 
+De Loth il se départ : 
+Pour ce qu'en mesme part 
+Deux ne pouuoyent tenir. 
+
+Vne guerre soudaine 
+Entre neuf Rois se meine. 
+Parmi ces grans combats, 
+Loth perd auec les siens 
+Sa franchise et ses biens : 
+Cinq Rois sont mis à bas. 
+
+Nostre maistre fidelle 
+Oyant ceste nouuelle 
+Viuement le poursuit, 
+Les atteint et desfaict. 
+N'ayant d'hommes de faict, 
+Que trois cens dix et huit. 
+
+Leur arrache leur proye, 
+La disme au prestre paye, 
+A chacun fait raison. 
+Puis de tous hautement 
+Loué tresiustement. 
+Retourne en sa maison. 
+
+
+
+FRANÇOISE. 29 
+
+Or parmi sa famille 
+N auoit-il fils ne fille. 
+Sara qui cela uoid, 
+Ne pouuant conceuoir, 
+Lui fait mesmes auoir 
+Ag^ar qui la seruoit. 
+
+D'Agar donc nostre maistre 
+Ismael se uid naistre. 
+Treize ans ainsi passa, 
+Voyant deuant ses yeux 
+Aller de bien en mieux 
+Les biens qu'il amassa. 
+
+Lors pour signifiance 
+De la saincte alliance 
+Du Seigneur et de nous, 
+Autant petits que grans, 
+lusqu'aux petits enfants 
+Circoncis ftismes tous. 
+
+ISAAC. 
+
+Mes amis» Dieu se monstre à nous 
+Si bon, si gracieux, si doux, 
+Que iamaiS ie ne lui demande 
+Chose tant soit petite ou grande, 
+Que ie ne me uoye accordé 
+Trop plus que ie n'ay demandé, 
+l'auoy' comme sauez, uouloir. 
+De nous suiure, à fin d'aller uoir : 
+Mais uoici mon père qui nient.. 
+
+
+
+30 TRAGEDIE 
+
+ABRAHAM sortant auee Sara, 
+Mais tant y a qu'il appartient, 
+Quand Dieu nous enioint une chose, 
+Que nous ayons la bouche close, 
+Sans estriuer aucunement 
+Contre son sainct commandement. 
+S*il commande, il faut obéir. 
+
+SARA. 
+
+le nous prie ne nous esbahir 
+Si le cas bien fascheux ie trouue. 
+
+ABRAHAM. 
+
+Au besoin le bon cœur s esprouve. 
+
+SARA. 
+
+Il est uray : mais en premier lieu , 
+Sachez donc le uouloir de Dieu. 
+Nous auons cest enfant seulet. 
+Qui est encores tout foiblet : 
+Auquel gist toute l'asseurance 
+De nostre si grande espérance. 
+
+ABRAHAM. 
+
+Mais en Dieu. 
+
+SARA. 
+
+Mais laissez-moy dire. 
+
+ABRAHAM. 
+
+Dieu se peut-il iamais desdire? 
+
+
+
+l 
+
+
+
+FRANÇOISE. 31 
+
+Partant asseuree soyez 
+
+Que Dieu le garde, et me. croyez. 
+
+sarâ. 
+Mais Dieu ueut-il qu'on le hazarde? 
+
+ABRAHAM. 
+
+Hazardé n est point que Dieu garde. 
+
+SARA. 
+
+le me doute de quelque cas. 
+
+ABRAHAM. 
+
+Quant à moy ie n'en doute pas. 
+
+SARA. 
+
+C'est quelque entreprise secrette. 
+
+ABRAHAM. 
+
+Mais telle qu'elle est. Dieu Ta faicte. 
+
+SARA. 
+
+Au moins si nous sauiez où c'est. 
+
+ABRAHAM. 
+
+Bien tost le sauray, si Dieu plaist. 
+
+SARA. 
+
+Il n'ira iamais iusques là. 
+
+ABRAHAM. 
+
+Dieu pouruoira à tout cela.. 
+
+
+
+32 TRAGEDIE 
+
+SARA. 
+
+Mais les cliemins sont dangereux. 
+
+ABRAHAM. 
+
+Qui meurt suîuant Dieu, est heureux. 
+
+SARA. 
+
+S'il meurt, nous uoila demeurez. 
+
+ABRAHAM. 
+
+Les morts de Dieu sont asseurez. 
+
+SARA. 
+
+Mieux uaut sacrifier ici. 
+
+ABRAHAM. 
+
+Mais Dieu ne le ueut pas ainsi. 
+
+SARA. 
+
+Or sus puis que faire le faut, 
+le prie au grand Seigneur d'en haut, 
+Mon seigneur, que sa saincte grâce 
+Tousiours compagnie nous face : 
+Adieu mon fils. 
+
+ISAAC. 
+
+Adieu ma mère. 
+
+
+
+FRANÇOISE. 33 
+
+SARA. 
+
+Suiuez bien tousîours uoslre père, 
+Mon ami» et seruez bien Dieu : 
+Afin que bien tost en ce lieu 
+Puissiez en santé reuenir. 
+Voila, îe ne me puis tenir, 
+Isaac, que ie ne nous baise. 
+
+ISAAG. 
+
+Ma mère, qu'il ne nous desplaise, 
+le nous ueux faire une requeste. 
+
+SARA. 
+
+Dites, mon ami, ie suis preste . 
+A raccorder. 
+
+ISAAC. 
+
+le nous supplie 
+D'oster ceste mélancolie. 
+Mais, s'il nous plaist, ne plourez point, 
+le reuiendray en meilleur poinct, 
+le nous pri* de ne nous fascher. 
+
+ABRAHAM. 
+
+Enfans, il nous faudra marcher 
+Pour le moins six bonnes ioumees. 
+Voila uos charges ordonnées. 
+Et tout ce qui fait de besoin. 
+
+
+
+34 TRAGEDÎF 
+
+
+
+TROUPE. 
+
+
+
+Sire, laissez-nous en le soin, 
+Tant seulement commandez-nous. 
+
+ABRAHAM. 
+
+Or sus, Dieu soit auec nous. 
+Ce grand Dieu qui par sa bonté 
+lusques ici nous a esté 
+Tant propice et tant secourable, 
+Soit à nous et moy fauorable. 
+Quoy qu'il y ait, monstrez-uous sage, 
+Tespere que nostre uoyage 
+Heureusement se parfera. 
+
+SARA. 
+
+Làs, ie ne say quand ce sera 
+Que reuoir ie nous pourray tous. 
+Le Seigneur soit aueques nous. 
+
+ISAAC. 
+
+Adieu ma mère. 
+
+ABRAHAM. 
+
+Adieu. 
+
+
+
+TROUPE. 
+
+
+
+Adieu. ^ 
+
+
+
+i 
+
+
+
+FRANÇOISE. 35 
+
+ABRAHAM. 
+
+Or SUS départons de ce lieu. 
+
+SATAN. 
+
+Mais n'est-ce pas pour enrager, 
+Moy qui fais un chacun ranger» 
+Qui say tirer le monde à moy. 
+Ne faisant signe que du doy : 
+Moy qui renuerse et trouble tout, 
+Ne puis pourtant uenir à bout 
+De ce faux uieiUard obstiné. 
+Quelque assaut qu'on lui ait donné. 
+Le uoila parti de ce lieu, 
+Et tout prest d*obeir à Dieu, 
+Quoy que le cas soit fort estrange. 
+Mais au fort, soit que son cœur change. 
+Ou qu'il sacrifie en effect. 
+Ce que ie prétends sera fait. 
+S'il sacrifie, Isaac mourra. 
+Et mon cœur deliuré sera 
+Delà frayeur, qu'en sa personne 
+La promesse de Dieu me donne. 
+S'il change de cœur, ie puis dire 
+Que i'ay tout ce que ie désire : 
+Et uoila le poinct où ie tasche. 
+Car si une fois il se fasche 
+D'obéir au Dieu tout-puissant, 
+Le uoila desobeissaut,^ 
+
+
+
+36 TRAGEDIÏT 
+
+Banni de Dieu et de sa grâce. 
+Voila le poinct que ie pourchasse. 
+Sus donc mon froc, courons après, 
+Pour le combattre de plus près. 
+
+PAVSE. 
+
+ABRAHAM. 
+
+Enfans, uoici arriué le tiers iour. 
+Que nous marchons sans auoir fait seiour 
+Que bien petit : reposer il nous faut. 
+Car quant à moy, ie ueux monter plus haut 
+Auec Isaac, iusqu'en un certain lieu, 
+Qui m'a esté enseigné de mon Dieu. 
+Là ie feray sacrifice et prière. 
+Gomme il requiert : demourez donc derrière. 
+Et nous gardez de marcher plus auant. 
+Mais nous, mon fils Isaac, passez deuant : 
+Car le Seigneur requiert uostre présence. 
+
+TROUPE. 
+
+Puis que telle est. Sire, uostre défense, 
+Nous demeurrons. 
+
+ABRAHAM. 
+
+Baillez-lui ce fardeau. 
+Et ie prendray le feu et le Cousteau. 
+Bien tost serons de retour, si Dieu plaist. 
+Mais cependant, sauez-uous bien que c'est ? 
+
+
+
+^ 
+
+
+
+FRANÇOISE. 37 
+
+Priez bien Dieu et pour nous et pour nous, 
+Helas i'en ay, 
+
+TROUPE. 
+
+Ainsi le ferons-nous. 
+
+ARRAHAM. 
+
+Autant besoin qu'eut onc poure personne. 
+Adieu nous di. 
+
+TROUPE. 
+
+Adieu. 
+
+DEMIE TROUPE. 
+
+Mais ie m'estonne 
+Très grandement. 
+
+DEMIE TROUPE. 
+
+Et moy aussi. 
+
+DEMIE TROUPE. 
+
+Et moy. 
+Comment? De uoir en tel esmoy, 
+Cil qui si bien a résisté 
+A tant de maux qu'il a porté. 
+
+DEMIE TROUPE. 
+
+De dire qu'il craigne la guerre, 
+Estant en ceste estrange terre, 
+
+
+
+^ TRAGEDIE 
+
+Il n'y auroit point de raison. 
+Car nous sauons, qu'une saison 
+Abimelech qui est seigneur 
+Du pays, lui fit cest honneur 
+De le uîsiter, et prier 
+Qu'à lui se daignast allier, 
+De sorte qu'en solennité 
+L'accord de paix fut arresté. 
+Au surplus, quant à son mesnage, 
+Que peut-il auoir dauantage ? 
+
+DEMIE TROUPE. 
+
+Il uit en paix et en repos, 
+Il est uîeil, mais il est dispos. 
+
+DEMIE TROUPE. 
+
+Il n'a qu'un fils, mon Dieu sait quel : 
+Au monde il n'en est point de tel. 
+Son bestail tellement foisonne. 
+Qu'il semble à uoir que Dieu lui donne 
+Encores plus qu'il ne souhaite. 
+
+DEMIE TROUPE. 
+
+Il n'y a chose tant parfaite, 
+Qu'il n'y ait tousiours à redire, 
+le prie à Dieu qu'il le retire 
+Bien tost de la peine où il est. 
+
+DEMIE TROUPE. 
+
+Ainsi le face, s'il lui plaist. 
+
+
+
+FRANÇOISE. 39 
+
+
+
+DEMIE TROUPE. 
+
+
+
+Quoy qu'il y ait, ie présuppose 
+Que ce soit quelque g^nde chose. 
+
+CANTIQUE DE LA TROUPE, 
+
+Quoy que soit cest uniuers 
+Tant spacieux et diuers, 
+Il n'y a rien tant soit ferme, 
+Rien n'y a qui n'ait son terme. 
+
+Dieu tout puissant qui tout g^arde, 
+Rien ici bas ne regarde, 
+Qui tousiours dure de mesme, 
+S'il ne regarde soy mesme. 
+
+Le grand soleil reluisant, 
+Va son flambeau conduisant. 
+Autant comme le iour dure : 
+Puis renient la nuict obscure, 
+Gouurant de ses noires ailes 
+Choses et laides et belles. 
+
+Que dirons-nous de la lune, 
+Qui iamais ne fut tout une? 
+Ores apparoist cornue, 
+Puis demie, puis bossue, 
+Puis esclaire toute ronde 
+Les ténèbres de ce monde. 
+
+
+
+40 TRAGEDIE 
+
+Les grans astres flamboyans, 
+Cà ei là uont tournoyans, 
+Peignans leurs diuers uisage 
+Et de beau temps et d'orage. 
+
+Si deux iours on met ensemble, 
+L'un à l'autre ne ressemble : 
+L'un passe légèrement, 
+L'autre dure longuement. 
+L'un est sur nous enuieux 
+De la lumière des.cieux. 
+L'un auee sa couleur bleue 
+Nous ueut esblouir la ueue : 
+L'un ueut le monde brusler, 
+L'autre essaye à le geler. 
+
+Ores la terre fleurie, 
+Estend sa tapisserie : 
+Ores d'un uent la froidure 
+Change en blancheur sa uerdure. 
+
+L'onde en son humide corps 
+S'enfle par dessus les bords, 
+Pillant par tout à outrance 
+Du laboureur l'espérance : 
+Puis en sa riue première 
+Sera bien tost prisonnière. 
+
+Parquoy celui qui se fonde 
+En rien qui soit en ce monde, 
+
+
+
+FRANÇOISE. 41 
+
+Soit en haut ou soit en bas, 
+le di que sag^e n'est pas. 
+Qu'est-ce donques de celui 
+Qui des hommes fait appuys. 
+
+Parmi tous les animaux 
+Suiets à dix mille maux, 
+Le soleil qui fait son tour, 
+Du monde tout à Tentour, 
+Ne uit onc pour dire en somme, 
+Chose si foible que l'homme. 
+Car tous les plus uertueux 
+Par les flots impétueux 
+Sont tellement combatus, 
+Qu'on en uoid maints abatus. 
+
+combien est fol qui cuide 
+De fascherie estre uuide 
+Tant qu'ici bas il sera ! 
+Mais cil qui désirera 
+D'estre asseuré, il lui faut 
+Son cœur appuyer plus haut : 
+Dont il aura bon exemple. 
+Si nostre maistre il contemple. 
+
+DEMIE TROUPE. 
+
+Or le mieux que nous puissions faire, 
+le croy que c'est de se retraire 
+En quelque coin plus à l'escart : 
+Afin que chacun de sa part, 
+
+
+
+42 TRAGEDIE 
+
+Prie le Seigneur qu'il lui plaise 
+Le ramener mieux à son aise. 
+Allons. 
+
+DEMIE TROUPE. 
+
+le uay tant que ie puis. 
+
+
+
+PAVSE. 
+
+ISAAC. 
+ABRAHAM. 
+
+Helas, las, quel père ie suis. 
+
+ISAAC. 
+
+
+
+Mon père. 
+
+
+
+Voila du bois, du feu, et un cousteau • 
+Mais ie ne uoy ni mouton ni agneau, 
+Que nous puissiez sacrifier ici. 
+
+
+
+ABRAHAM. 
+
+
+
+Isaac mon fils, Dieu en aura souci. 
+Attendez-moy, mon ami en ce lieu. 
+Car il me faut un petit prier Dieu. 
+
+
+
+ISAAC. 4 
+
+Et bien mon père, allez : mais ie uous prie, 
+
+
+
+
+
+
+FRANÇOISE. 43 
+
+Me direz-uous quelle est la fascherie, 
+Dont ie uous uoy tormenté iusqu'au bout? 
+
+ABRAHAM. 
+
+A mon retour, mon fils, uous saurez tout : 
+Mais cependant prier uous faut aussi. 
+
+ISAAG. 
+
+C'est bien raison : ie le feray ainsi. 
+Et quant et quant le cas appresteray. 
+En premier lieu ce bois i'entasseray. 
+Premièrement ce baston sera là : 
+Puis cestuy-ci, puis après cestuy-la. 
+Voila ie cas, mon père aura le soin 
+Quant au surplus qui nous fait de besoin. 
+Prier m'en uay, ô Dieu, ta saincte face : 
+C'est bien raison, ô Dieu, que ie le face : 
+
+SARA. 
+
+Plus on uit, plus on uoid, helas. 
+Que c'est que de uiure ci bas. 
+Soit en mari, soit en lignée, 
+11 n'y eut onques femme née 
+Autant heureuse que ie suis : 
+Mais i'ay tant enduré d'ennuis 
+Ces trois derniers iours seulement. 
+Que ie ne say pas bonnement 
+Lequel est le plus grand des deux, 
+Ou le bien que i'ay receu d'eux. 
+Ou le mal que i'ay enduré 
+
+
+
+H TRAGEDIE 
+
+En trois iours qu'ils ont demeuré. 
+Ne nuict ne lour ie ne repose : 
+Et si ne pense à autre chose 
+Qu'à mon seigneur et à mon fils. 
+A uray dire, assez mal ie fis 
+De les laisser aller ainsi, 
+Ou de n'y estre allée aussi. 
+De six iours sont passez les trois. 
+Que trois ! mon Dieu, et toutes fois 
+Trois autres attendre il me faut. 
+Helàs, mon Dieu qui uois d'en-haut 
+Et le dehors et le dedans, 
+Vueilles accourcir ces trois ans : 
+Car à moy ils ne sont point iours, 
+Fussent-ils trente fois plus cours. 
+Mon Dieu, tes promesses m'asseurent : 
+Mais si plus long temps ils demeurent, 
+Tay besoin de force nouuelle. 
+Pour soufiFrir une peine telle. 
+Mon Dieu, permets qu'en toute ioye, 
+Bien tost mon seigneur ie reuoye, 
+Et mon Isaac que m'as donné, 
+l'accole en santé retourné. 
+
+ABRAHAM. 
+
+Dieu, ô Dieu tu uois mon cœur ouuert 
+Ce que ie pense, ô Dieu t'est descouuert : 
+Qu'est-il besoin que mon mal ie te die? 
+Tu uois, helàs, tu uois ma maladie : 
+
+
+
+f 
+
+
+
+FRANÇOISE. 45 
+
+Tu peux tout seul guarison m'enuoyer, 
+
+S11 te plaisoit seulement m'ottroyer 
+
+Vn tout seul poinci que demander ie nose. 
+
+SATAN. 
+
+Si faut-il bien chanter quelqu'autre chose. 
+
+ABRAHAM. 
+
+Gomment? comment? se pourroit-il bien faire, 
+Que Dieu dist l'un, et puis tîst du contraire? 
+Est-il trompeur? si est-ce qu'il a mis 
+En uray efifect ce qu'il m'auoit promis. 
+Pourroit-il bien maintenant se desdire? 
+Si faut-il bien ainsi conclurreetdire, 
+S'il ueut rauoir le 61s qu'il m'a donné. 
+Que di-ie? ô Dieu, puis que l'as ordonné, 
+le le feray. las, est-il raisonnable, 
+Que moy qui suis pécheur tant misérable, 
+Viene à iuger les secrets iugemens 
+De tes parfaits et tressaincts mandemens ? 
+
+SATAN. 
+
+Mon cas ua mal, mon froc, trouuer nous faut 
+Autre moyen de luy donner assaut. 
+
+ABRAHAM. 
+
+Mais il peut estre aussi que i'imagine 
+Ce qui n'est point : car tant plus l'examine 
+
+
+
+46 TRAGEDIE 
+
+Ce cas ici, plus ie le trouue estrange. 
+
+C'est quelque songe, ou bien quelque faux ange 
+
+Qui ma planté ceci en la ceruelle : 
+
+Dieu ne ueut point d'offrande si cruelle. 
+
+Maudit-il pas Gain, n'ayant occis 
+
+Qu'Abel son frère? et i occiray mon fils? 
+
+SATAN. 
+
+Jamais, iamais. 
+
+ABRAHAM. 
+
+Hà, qu'ay-ie cuîdé dire? 
+Pardonne moy mon Dieu, et me retire 
+Du mauuais pas où mon péché me meine. 
+Deliure moy. Seigneur, de ceste peine. 
+Tuer le ueux moy-mesme de ma main, 
+Puis qu'il te plaist, ô Dieu : il est certain 
+Que c'est raison, parquoy ie le feray. 
+
+SATAN. 
+
+Mais si ie puis ie t'en engarderay. 
+
+ABRAHAM. 
+
+Mais le faisant ie feroy' Dieu menteur : 
+Car il m'a dit qu'il me feroit cest heur. 
+Que de mon fils Isaac il sortiroit 
+Vn peuple grand qui la terre emplirolt. 
+Isaac tué, l'alliance est defaicte. 
+Las est-ce en uain. Seigneur, que tu l'as faite? 
+
+
+
+FRANÇOISE. 47 
+
+Las est-ce en uain. Seigneur que tant de fois 
+Tu m'as promis qu'en Isaac me ferois 
+Ce que iamais à autre ne promis ? 
+Làs pourroit-il à néant estre mis 
+Ce, dont tu m'as tant de fois asseuré ? 
+Làs, est-ce en uain qu'en toy i'ay espéré? 
+uaine attente, ô uain espoir de Thomme ! 
+C'est tout cela que ie puis dire en somme, 
+l'ay prié Dieu qu'il me donnast lignée, 
+Pensant, helas, s'elle m'estoit donnée. 
+Que i'en auroy' un merueilleux plaisir. 
+Et ie n'en ay que mal et desplaisir. 
+De deux enfans l'un i'ay chassé moy-mesme, 
+De l'autre il faut, ô douleur très extrême. 
+Que ie soy' dit le père et le bourreau : 
+Bourreau, helas, helas, ouy bourreau. 
+Mais n'es-tu pas celui Dieu proprement. 
+Qui m'escoutas ainsi patiemment. 
+Voire, Seigneur, au plus fort de ton ire, 
+Quand tu partis pour Sodome destruire? 
+Maintenant donc ueux-tu, mon Dieu, mon Roy, 
+Me repousser quand ie prie pour moy? 
+Engendré l'ay, et faut que le defface. 
+Dieu, ô Dieu, au moins fay-moy la grâce, 
+
+SATAN. 
+
+Grâce, ce mot n'est point en mon papier. / ^ 
+
+ABRAHAM. 
+
+Qu'un autre soit de mon fils le meurtrier. 
+
+
+
+48 TRAGEDIE 
+
+Helas Seigneur, faut-il que ceste main 
+
+Vienne à donner ce coup tant inhumain? 
+
+Las, que feray-ie à la mère dolente, 
+
+Si elle entend ceste mort uiolente? 
+
+Si ie t'allègue, helas, qui me croira? 
+
+S* on ne le croit, làs, quel bruit en courra? 
+
+Seray-ie pas d'un chacun reietté 
+
+Gomme un patron d extrême cruauté? 
+
+Et toy. Seigneur, qui te uoudra prier? 
+
+Qui se uoudra iamais en toy fier? 
+
+Làs pourra bien ceste blanche uieillesse 
+Porter le faix d'une telle tristesse? 
+Ay-ie passé parmi tant de dangers, 
+Tant trauerséde pays estrangers. 
+Souffert la faim, la soif, le chaut, le froid. 
+Et deuant toy tousiours cheminé droit : 
+Ay-ie uescu, uescu si longuement, 
+Pour me mourir si malheureusement? 
+Fendez mon cœur, fendez, fendez, fendez, 
+Et pour mourir plus long temps n'attendez. 
+Plustost on meurt, tant moins la mort est greue: 
+
+SATAN. 
+
+Le uoila bas, si Dieu ne le releue. 
+
+ABRAHAM. 
+
+Que di-ie? où suis-ie? ô Dieu mon créateur, 
+Ne suis-ie pas ton loyal seruiteur? 
+Nemas-tu pas de mon pays tiré? 
+Ne m'as-tu pas tant de fois asseuré. 
+
+
+
+FRANÇOISE. 49 
+
+Que ceste terre aux miens estoit donnée? 
+
+Ne m'as-tu pas donné cette lignée, 
+
+En m'asseurant que d'isaac sortiroit 
+
+Vn peuple tien qui la terre empliroit? 
+
+Si donc tu ueux mon Isaac emprunter, 
+
+Que me faut-il contre toi disputer? 
+
+Il est à toy : mais de toy ie Tay pris. 
+
+Et pour autant quand tu l'auras repris, 
+
+Resusciter plustost tu le feras, 
+
+Qu'il ne m'aduinst ce que promis tu m'as. 
+
+Mais, ô Seigneur, tu sais qu'homme ie suis : 
+
+Exécuter rien de bon ie ne puis, 
+
+Non pas penser : mais ta force inuincible 
+
+Fait qu'au croyant il n'est rien impossible. 
+
+Arrière chair, arrière affections : 
+
+Retirez-vous, humaines passions. 
+
+Rien ne m'est bon, rien ne m'est raisonnable, 
+
+Que ce qui est au Seigneur agréable. 
+
+SATAN. 
+
+Et bien, et bien, Isaac donc mourra, 
+Et nous uerrons après que ce sera. 
+faux uieillard, tant me donnes de paine! 
+
+ABRAHAM. 
+
+Voila mon fils Isaac qui se pourmeine. 
+poure enfant, ô nous poures humains^ 
+Cachans souuent la mort dedans nos seins, 
+Alors que plus en pensons estre loin. 
+Et pour autant il est tresgrand besoin 
+
+3 
+
+
+
+50 TRAGEDIE 
+
+De uiure ainsi que mourir on désire. 
+Or ça mon fils, helas que ueuK-ie dire? 
+
+ISAAG. 
+
+Plaist il mon père. 
+
+ABRAHAM. 
+
+Helas ce mot me tue. 
+Mais si faut-il pourtant que m'esuertue. 
+Isaac mon fils, helas, le cœur me tremble. 
+
+ISAAC. 
+
+Vous auez peur, mon père, ce me semble. 
+
+ABRAHAM. 
+
+Hà mon ami, ie tremble uoirement. 
+Helas, mon Dieu ! -^ 
+
+ISAAC. 
+
+Dites moy hardiment 
+Que nous auez, mon père, s'il nous plaist. 
+
+ABRAHAM. 
+
+Hà mon ami, si nous sauiez que c'est 
+
+Miséricorde, ô Dieu, miséricorde ! 
+Mon fils, mon fils, uoyez-uous ceste corde, 
+Ce bois, ce feu, et ce cousteau ici? 
+Isaac, Isaac, c'est pour nous tout ceci. 
+
+
+
+t 
+
+
+
+FRANÇOISE. 51 
+
+
+
+SATAN. 
+
+
+
+Ennemi suis de Dieu et de nature : 
+Mais pour certain ceste chose est si dure, 
+Qu'en regardant ceste unique amitié, 
+Bien peu s'en faut que n'en aye pitié. 
+
+ABRAHAM. 
+
+Helas Isaac. 
+
+ISAAG. 
+
+Helas, père très doux, 
+le nous suppli, mon père, à deux genoux 
+Auoir au moins pitié de ma ieunesse. 
+
+ABRAHAM. 
+
+seul appuy de ma foible uieillesse ! 
+Làs, mon ami, mon ami, ie uoudrois 
+Mourir pour nous cent millions de fois : 
+Mais le Seigneur ne le ueut pas ainsi. 
+
+ISAAC. 
+
+Mon père, helas, ie nous crie merci. 
+Helas, helas, ie n'ay ne bras ne langue 
+Pour me défendre, ou faire ma harengue 
+Mais, mais uoyez, ô mon père, mes larmes : 
+Auoir ne puis ni ne ueux autres armes 
+Encontre nous : ie suis Isaac, mon père, 
+le suis Isaac, le seul fils de ma mère i 
+
+
+
+52 TRAGEDIE 
+
+le suis Isaac, qui tient de uous la uie : 
+Souffrirez-uous qu'elle me soit rauie? 
+Et toutesfois si uous faites cela, 
+Pour obéir au Seigneur, me uoila : 
+Me uoila prest, mon père, et à genoux, 
+Pour souffrir tout et de Dieu et de uous. 
+Mais qu'ay-ie fait, qu*ay-ie fait pour mourir? 
+He Dieu, he Dieu, uueille-me secourir. 
+
+ABRAHAM. 
+
+Helas mon fils Isaac, Dieu, te commande 
+Qu'en cest endroit tu lui serues d'ofi'rande. 
+Laissant à moy, à moy ton poure père, 
+Làs quel ennuy ! 
+
+ISAAC. 
+
+Helas ma poure mère, 
+Combien de morts ma mort uous donnera ! 
+Mais dites-moy au moins qui m'occira? 
+
+ABRAHAM. 
+
+Qui t'occira, mon fils! mon Dieu, mon Dieu, 
+Ottroye moy de mourir en ce lieu? 
+
+ISAAC 
+
+Mon père. 
+
+ABRAHAM. 
+
+Helas, ce mot ne m'appartient. 
+
+
+
+FRANÇOISE. 53 
+
+Helas, Isaac, si est-ce qu'il conuient 
+Seruir à Dieu. 
+
+ISAAC. 
+
+Mon père, me uoila. 
+
+SATAN. 
+
+Mais ie uous pri, qui eust pensé cela? 
+
+ISAAC. 
+
+Or donc, mon père, il faut comme ie uoy, 
+Il fautmourir.'Làs, mon Dieu, aîde-moy : 
+Mon Dieu, mon Dieu, renforce moy le cœur. 
+Ren-moy . mon Dieu, sur moy-mesme ueinqueur. 
+Liez, frappez, bruslez, ie suis tout prest 
+D'endurer tout, mon Dieu, puis qu'il te plaist. 
+
+ABRAHAM. 
+
+A, a, a, a, et qu'est-ce, et qu'est ceci ? 
+Miséricorde, ô Dieu par ta merci. 
+
+ISAAC. 
+
+Seigneur, tu m'as et créé et forgé, 
+Tu m'as. Seigneur sur la terre logé. 
+Tu m*as donné ta saincte cognoissance : 
+Mais ie ne t'ay porté obéissance 
+Telle, Seigneur, que porter ie deuois-: 
+Ce que te prie, helas, à haute uoix. 
+
+
+
+54 TRAGEDIE 
+
+Me pardonner. Et à nous mon seigneur, 
+Si ie n'ay fait tousiours autant d'honneur 
+Que meritoit uostre douceur tant grande, 
+Treshumblement pardon nous en demande. 
+Quant à ma mere^ helas, elle est absente 
+Vueille, mon Dieu, par ta faneur présente 
+La preseruer et garder tellement. 
+Qu'elle ne soit troublée aucunement. 
+(Ici est bandé Isaac.) 
+Làs, ie m'en uay en une nuict profonde, 
+Adieu nous di la clarté de ce monde. 
+Mais ie suis seur que de Dieu la promesse 
+Me donnera trop mieux que ie ne laisse, 
+le suis tout prest, mon père, me uoila. 
+
+SATAN. 
+
+Jamais, iamais enfant mieux ne parla, 
+le suis confus, et faut que ie m'enfuye. 
+
+ABRAHAM. 
+
+Làs, mon ami, auant la départie. 
+Et que ma main ce coup inhumain face. 
+Permis me soit de te baiser en face. 
+Isaac, mon fils, le bras qui t'occira, 
+Encor' un coup au moins t'accolera. 
+
+ISAAC. 
+
+Làs grand merci. 
+
+
+
+FRANÇOISE. 55 
+
+ABRAHAM. 
+
+ciel, qui es Touurage 
+De ce grand Dieu, et qui m'es tesmoignage 
+Très suffisant de la grande lignée 
+Que le uray Dieu par Isaac m'a donnée : 
+Et toy la terre à moy cinq fois promise, 
+Soyez tesmoin que ma main n'est point mise 
+Sus cest enfant, par haine ou par uengeance. 
+Mais pour porter entière obéissance 
+A ce grand Dieu facteur de i'uniuers, 
+Sauueur des bons, et iuge des peruers. 
+Soyez tesmoins qu'Abraham le fidèle. 
+Par la bonté de Dieu a la foy telle, 
+Que nonobstant toute raison humaine, 
+lamais de Dieu la parole n*est uaine. 
+Or est il temps, ma main, que t'esuertues, 
+
+(Ici le Cousteau lui tombe des mains.) 
+
+Et qu'en frappant mon seul fils, tu me tues. 
+
+ISAAG. 
+
+Qu'est-ce que i'oy, mon père? helas mon père ! 
+
+ABRAHAM. 
+
+A, a, a, a. 
+
+ISAAC. 
+
+Là ie nous obtempère. 
+Suis-ie pas bien? 
+
+
+
+56 TRAGEDIE 
+
+ABRAHAM. 
+
+Fut-il iamais pitié, 
+Fut-il iamais une telle amitié? 
+Fut-il iamais pitié? a, a, ie meurs, 
+le meurs, mon fils. 
+
+ISAAG. 
+
+Ostez toutes ces peurs, 
+le nous suppli : m'empescherez uous donques 
+D'aller à Dieu? 
+
+ABRAHAM. 
+
+(Ici le cuide frapper.) 
+
+Helàs, làs qui uid onques 
+En petit corps un esprit autant fort? 
+Helàs, mon fils, pardonne moy ta mort. 
+
+l'ange. 
+Abraham, Abraham. 
+
+ABRAHAM. 
+
+Mon Dieu. 
+
+l'ange. 
+
+Remets ton cousteau en son lieu : 
+Garde bien de ta main estendre 
+Dessus l'enfant, ni d'entreprendre 
+
+
+
+FRANÇOISE. 57 
+
+De l'outrager aucunement. 
+Or peux-ie uoîr tout clairement 
+Quel amour tu as au Seigneur, 
+Puis que lui portes cest honneur. 
+De uouloir pour le contenter 
+Ton fils à la mort présenter. 
+
+ABRAHAM. 
+
+Dieu. 
+
+ISAAG. 
+
+Dieu. 
+
+ABRAHAM. 
+
+(Ici prend le mouton.) 
+
+Seigneur uoila que c'est 
+De s'obéir. Voici mon cas tout prest : 
+Prendre le ueux. 
+
+l'ange. 
+Abraham. 
+
+ABRAHAM. 
+
+Me uoici : 
+Seigneur, Seigneur. 
+
+l'ange. 
+
+Le Seigneur dit ainsi : 
+
+
+
+58 TRAGEDIE 
+
+le le promets par ma grand' maîesté, 
+
+Par la uertu de ma diuinité, 
+
+Puis que tu as uoulu faire cela, > 
+
+Puis que tu m'as obéi iusques-ià, 
+
+De n'espargner de ton seul fils la uie : 
+
+Maugré Satan et toute son enuie, 
+
+Bénir te ueux auec toute ta race. 
+
+Vois-tu les grains de l'arène au riuage? 
+
+Croistre feray tellement ton lignage, 
+
+Qu'il n'y a point d'estoiles aux deux, 
+
+Tant de sablon par les bords spatieux 
+
+De rOcean qui la terre enuironne, 
+
+Qu'il descendra d'enfans de ta personne. 
+
+Ils domteront quiconques les haira, 
+
+Et par celui qui de toy sortira, 
+
+Sur toutes gens et toutes nations 
+
+le desploiray mes bénédictions ^ 
+
+Et grans thresors de diuine puissance, 
+
+Puis que tu m'as porté obéissance. 
+
+
+
+E P I L G V E. 
+
+Or uoyez-uous de foy la grand puissance, 
+Et le loyer de uraye obéissance. 
+Parquoy, messieurs, et mes dames aussi, 
+le nous suppli quand sortirez d'ici, 
+Que de nos cœurs ne sorte la mémoire 
+De ceste digne et ueritable histoire. M 
+
+Ce ne sont point des farces mensongères, 
+
+
+
+FRANÇOISE. Ô9 
+
+Ce ne sont point quelques fables légères : 
+Mais c'est un faiet, un faict très ueritable, 
+D'un serf de Dieu, de Dieu très redoutable. 
+Parquoy seigneurs, dames maistres, maistresses, 
+Poures, puissans, ioyeux, pleins de destresses, 
+Grans et petits, en ce tant bel exemple 
+Chacun de nous se mire et se contemple. 
+Tels sont pour uray les miroirs où Ton uoid 
+Le beau, le laid, le bossu, et le droit. 
+Car qui de Dieu tasche accomplir sans feinte. 
+Comme Abraham, la parole très saincte. 
+Qui nonobstant toutes raisons contraires, 
+Remet en Dieu et soy et ses affaires, 
+Il en aura pour certain une issue 
+Meilleure encor' qu'il ne l'aura conçeue. 
+Vienent les uents, uienent tempestes fortes, 
+f Vienent tormens, et morts de toutes sortes, 
+
+j Tournent les cieux, toute la terre tremble, 
+
+I Tout luniuers renuerse tout ensemble. 
+
+Le cœur fidèle est fondé tellement, 
+Que renuerser ne peut aucunement : 
+Mais au rebours, tout homme qui s'arreste 
+Au iugement et conseil de sa teste : 
+L'homme qui croit tout ce qu'il imagine, 
+Il est certain que tant plus il chemine. 
+Du uray chemin tant plus est escarté, 
+Vn petit uent Ta soudain emporté : 
+
+IEt qui plus est, sa nature peruerse 
+En peu de temps soy-mesme se renuerse. 
+Or toy grand Dieu, qui nous as fait cognoistre 
+
+</div>
+</body>
+</html>
