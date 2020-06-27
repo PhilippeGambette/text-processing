@@ -1,6 +1,6 @@
 </html><head>
 <meta charset="UTF-8">
-<title>fs - Correction des erreurs d'OCR ſ &rarrow; s</title>
+<title>fs - Correction des erreurs d'OCR f/ſ</title>
 <link rel="icon" href="fs.ico" />
 <style>
 h1,h2,h3 {text-align:center}
@@ -29,14 +29,16 @@ $(document).ready( function() {
 <h1>fs</h1>
 <h2>Aide à la correction d'OCR des "f" en "ſ"</h2>
 <p>
-Cet outil <a href="https://github.com/PhilippeGambette/text-processing">mis à disposition sous licence libre</a> a été conçu par Philippe Gambette à partir de l'outil <a href="../../ijuv/">ijuv</a> et d'une demande d'Andrew Brown sur la <a href="https://groupes.renater.fr/sympa/info/dh">liste DH</a> en juin 2020.
+Cet outil <a href="https://github.com/PhilippeGambette/text-processing">mis à disposition sous licence libre</a> a été conçu par Philippe Gambette à partir de l'outil <a href="../../ijuv/">ijuv</a> et d'une demande d'Andrew Brown sur la <a href="https://groupes.renater.fr/sympa/info/dh">liste DH</a> en juin 2020, complétée par des ressources et idées de Simon Gabay.
 </p>
 
 <p>
 Merci de coller dans le cadre ci-dessous le texte dans lequel vous souhaitez corriger les "f" en "ſ" :
 </p>
 <form action="fs.php" method="post">
-<textarea cols="40" rows="10" id="textarea" name="fullText"></textarea>
+<textarea cols="45" rows="12" id="textarea" name="fullText"></textarea>
+<br/>
+<input type="checkbox" id="nc"><label for="nc">Usage non commercial<br><small>(plus lent, mais utilisation de données issues des ressources LGeRM de l'ATILF si la case est cochée, sinon utilisation uniquement du DELAF et de Lexique 3.83)</small></label>
 <br/><br/>
 <input type="submit">
 <br/>

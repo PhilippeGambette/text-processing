@@ -70,6 +70,15 @@ wordsWithAnF = {}
 # uses resources which may not be used for commercial purposes.
 suffix = ""
 
+# Load a list of words containing an s built by Simon Gabay from LGeRM (http://www.atilf.fr/LGeRM)
+# LGeRM is available under the CC BY NC SA 3.0 license (https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)
+suffix = "-nc"
+print(" ")
+print("Loading part of the LGeRM database")
+input = open(os.path.join(folder,"LGeRM-s.txt"),"r",encoding="utf-8")
+loadWords(input,"	",wordsWithANonFinalS,wordsWithAnF)
+input.close()
+
 # Load the DELAF transformed into UTF-8 (http://infolingu.univ-mlv.fr/DonneesLinguistiques/Dictionnaires/telechargement.html)
 # DELAF is available under the LGPLLR license (http://infolingu.univ-mlv.fr/DonneesLinguistiques/Lexiques-Grammaires/lgpllr.html)
 print(" ")
@@ -87,14 +96,6 @@ loadWords(input,"	",wordsWithANonFinalS,wordsWithAnF)
 input.close()
 
 """
-# Load a list of words containing an s built by Simon Gabay from LGeRM (http://www.atilf.fr/LGeRM)
-# LGeRM is available under the CC BY NC SA 3.0 license (https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)
-suffix = "-nc"
-print(" ")
-print("Loading part of the LGeRM database")
-input = open(os.path.join(folder,"LGeRM-s.txt"),"r",encoding="utf-8")
-loadWords(input,"	",wordsWithANonFinalS,wordsWithAnF)
-input.close()
 """
 
 ##############################################
