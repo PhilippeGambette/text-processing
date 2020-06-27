@@ -9,7 +9,11 @@ h1,h2,h3 {text-align:center}
 <link rel="icon" href="ijuv.ico" />
 </head>
 <SCRIPT TYPE="text/javascript" SRC="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></SCRIPT>
-<SCRIPT TYPE="text/javascript" SRC="./fs-resources.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" SRC="./fs-resources<?php 
+if(sizeof($_POST["nc"])==1){
+  echo '-nc';
+}
+?>.js"></SCRIPT>
 <SCRIPT TYPE="text/javascript" SRC="./fs.js"></SCRIPT>
 
 </body>
@@ -18,14 +22,23 @@ h1,h2,h3 {text-align:center}
 <h2>Résultat de l’aide à la correction d'OCR des "f" en "ſ"</h2>
 <h3>Comment ça marche...</h3>
 <p>
-Cet outil, <b>fs</b>, utilise une liste de termes potentiellement erronés contenant un "f" au lieu d'un "s" construire à partir
-1) de la liste des termes en moyen et ancien français, contenant des "s" ou des "f", réunis dans ce
-<a href="https://fr.wikisource.org/wiki/Wikisource:Dictionnaire">dictionnaire Wikisource de modernisation orthographique</a>
-(disponible sous <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">licence Creative Commons Attribution-partage dans les mêmes conditions</a> ;
-la liste de ses contributeurs et contributrices se trouve <a href="https://fr.wikisource.org/w/index.php?title=Wikisource:Dictionnaire&action=history">ici</a>),
-et 2) de la liste des mots simples du <a href="http://infolingu.univ-mlv.fr/DonneesLinguistiques/Dictionnaires/telechargement.html">Dictionnaire DELA fléchi du français</a>
-(disponible sous licence <a href="http://infolingu.univ-mlv.fr/DonneesLinguistiques/Lexiques-Grammaires/lgpllr.html">LGPLLR</a>).
-Voir la liste dans <a href="fs-resources.js">ce fichier</a>.
+Cet outil, <b>fs</b>, utilise une liste de termes potentiellement erronés contenant un "f" au lieu d'un "s" construite à partir :
+<ol>
+<li>de la liste des mots simples du <a href="http://infolingu.univ-mlv.fr/DonneesLinguistiques/Dictionnaires/telechargement.html">Dictionnaire DELA fléchi du français</a>
+(disponible sous licence <a href="http://infolingu.univ-mlv.fr/DonneesLinguistiques/Lexiques-Grammaires/lgpllr.html">LGPLLR</a>) ;</li>
+<li>de la base de données <a href="http://www.lexique.org">Lexique 3.83</a>
+(disponible sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY SA 4.0</a>) ;</li>
+<?php 
+if(sizeof($_POST["nc"])==1){
+  echo '<li>d’une liste de mots construite par Simon Gabay à partir du LGeRM (disponible sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/">CC BY NC SA 3.0</a>) ;</li>';
+}
+?></ol>
+pour obtenir la liste contenue dans <a href="fs-resources<?php 
+if(sizeof($_POST["nc"])==1){
+  echo '-nc';
+}
+?></ol>
+.js">ce fichier</a>.
 </p>
 <p>
 L'outil <b>fs</b> est un <a href="fs.js">code Javascript</a>
