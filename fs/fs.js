@@ -22,7 +22,6 @@ Script d'aide à la correction d'OCR des f en ſ
 
 var treatedWords = 0
 
-
 // Treat each HTML block with the line class
 $(document).ready( function() {
   $(".line").each(
@@ -33,13 +32,35 @@ $(document).ready( function() {
 })
 
 
+// Replace by an ſ, in word, each s which was originally an f in replacedWord 
+function restoreLongS(word,replacedWord){
+   var i = 0;
+   var outputWord = "";
+   console.log(word[i],replacedWord[i]);
+   while(i<word.length){
+     if(replacedWord[i] == "f" && word[i] == "s"){
+        outputWord += "ſ";
+     } else {
+        outputWord += word[i];
+     }
+     i++;
+   }
+   console.log(outputWord);
+   return outputWord;
+}
+
+
+// Color the word if it was corrected or corresponds to an ambiguity
 function treatWord(word){
    if (dictionary.hasOwnProperty(word)) {
-      console.log(word)
+      // if the word is found in the list of words to correct, pssibly
+      //console.log(word)
       var correction = dictionary[word];
-      if(correction.length==1){
-         word = "<span class=\"replaced\">"+dictionary[word]+"</span>";
+      if(correction.length == 1){
+         // if there is no ambiguity, correct the word
+         word = "<span class=\"replaced\">"+restoreLongS(correction[0],word)+"</span>";
       }else{
+         // if there is an ambiguity, keep the original word
          word = "<span class=\"candidate\">"+word+"</span>";
       } 
    }
@@ -47,6 +68,7 @@ function treatWord(word){
 }
 
 
+// 
 function treat(line){
    var output = "";
    var currentWord = "";
